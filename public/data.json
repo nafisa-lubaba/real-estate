@@ -1,0 +1,105 @@
+[
+    {
+      "id": 1,
+      "segment_name": "Hospitality",
+      "estate_title": "Luxury Beach Resort",
+      "image": "https://i.ibb.co/nRzCH4Y/img-1.png",
+      "description": "Experience luxury living at our beachfront resort. Enjoy breathtaking views, world-class amenities, and personalized service.",
+      "price": "$500 - $1000 per night",
+      "status": "rent",
+      "area": "5000 sq ft",
+      "location": "Tropical Island Paradise",
+      "facilities": ["Private Beach Access", "Spa & Wellness Center", "Fine Dining Restaurants"],
+      "other_information": {
+        "bedrooms": 10,
+        "bathrooms": 10,
+        "guest_capacity": 20
+      }
+    },
+    {
+      "id": 2,
+      "segment_name": "Hospitality",
+      "estate_title": "Mountain Lodge Retreat",
+      "image": "https://i.ibb.co/wL1s1ZT/img-2.png",
+      "description": "Escape to the serene mountainside and enjoy cozy accommodations, outdoor adventures, and breathtaking views.",
+      "price": "$200 - $400 per night",
+      "status": "rent",
+      "area": "3000 sq ft",
+      "location": "Rustic Mountain Setting",
+      "facilities": ["Fireplace", "Outdoor Hot Tub", "Gourmet Kitchen"],
+      "other_information": {
+        "bedrooms": 5,
+        "bathrooms": 3,
+        "guest_capacity": 10
+      }
+    },
+    {
+      "id": 3,
+      "segment_name": "Hospitality",
+      "estate_title": "Urban Boutique Hotel",
+      "image": "https://i.ibb.co/j5s2TN2/img-3.png",
+      "description": "Experience the vibrant city life with a stay at our chic boutique hotel. Discover modern comforts and personalized service in the heart of the city.",
+      "price": "$150 - $300 per night",
+      "status": "rent",
+      "area": "2000 sq ft",
+      "location": "Downtown Metropolis",
+      "facilities": ["Rooftop Bar", "Fitness Center", "Complimentary Breakfast"],
+      "other_information": {
+        "bedrooms": 20,
+        "bathrooms": 20,
+        "guest_capacity": 40
+      }
+    },
+    {
+      "id": 4,
+      "segment_name": "Hospitality",
+      "estate_title": "Cozy Vacation Cottage",
+      "image": "https://i.ibb.co/tYjYSNP/img-4.png",
+      "description": "Relax and unwind in our charming vacation cottage nestled in the countryside. Enjoy peaceful surroundings and modern amenities.",
+      "price": "$100 - $200 per night",
+      "status": "rent",
+      "area": "1500 sq ft",
+      "location": "Scenic Countryside",
+      "facilities": ["Outdoor Patio", "BBQ Grill","WiFi"],
+      "other_information": {
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "guest_capacity": 6
+      }
+    },
+    {
+      "id": 5,
+      "segment_name": "Hospitality",
+      "estate_title": "Seaside Villa",
+      "image": "https://i.ibb.co/wrMFs5b/img-5.png",
+      "description": "Indulge in luxury at our exclusive seaside villa. With stunning ocean views and upscale amenities, it's the perfect retreat for a memorable vacation.",
+      "price": "$800 - $1200 per night",
+      "status": "rent",
+      "area": "4500 sq ft",
+      "location": "Secluded Coastal Haven",
+      "facilities": ["Private Pool", "Beachfront Access", "Outdoor Lounge", "Chef's Kitchen"],
+      "other_information": {
+        "bedrooms": 8,
+        "bathrooms": 6,
+        "guest_capacity": 16
+      }
+    },
+    {
+      "id": 6,
+      "segment_name": "Hospitality",
+      "estate_title": "Ski Chalet Retreat",
+      "image": "https://i.ibb.co/6gFdZsM/img-6.png",
+      "description": "Experience the ultimate winter getaway at our cozy ski chalet. Located slopeside, enjoy ski-in/ski-out access and après-ski relaxation.",
+      "price": "$300 - $600 per night",
+      "status": "rent",
+      "area": "2500 sq ft",
+      "location": "Snowy Mountain Resort",
+      "facilities": ["Hot Tub", "Fireplace", "Ski Storage", "Game Room"],
+      "other_information": {
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "guest_capacity": 8
+      }
+    }
+  ]
+  
