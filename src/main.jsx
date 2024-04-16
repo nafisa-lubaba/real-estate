@@ -13,15 +13,26 @@ import UpdateProfile from './pages/UpdateProfile';
 import UserProfile from './pages/UserProfile';
 import About from './pages/About';
 import ContactUs from './pages/ContactUs';
+import CardInfo from './pages/CardInfo';
+import ErrorPage from './pages/ErrorPage';
+import SignIn from './pages/SignIn';
+import Registration from './pages/Registration';
+import FirebaseProvider from './FirebaseProvider/FirebaseProvider';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path:'/',
         element:<Home></Home>
+      },
+      {
+        path:'/cart/:id',
+        element:<CardInfo></CardInfo>,
+        loader: () => fetch('/data.json')
       },
       {
         path:'/updateprofile',
@@ -38,13 +49,24 @@ const router = createBrowserRouter([
       {
         path:'/contactus',
         element:<ContactUs></ContactUs>
-      }
+      },
+      {
+        path:'/signin',
+        element:<SignIn></SignIn>
+      },
+      {
+        path:'/signup',
+        element:<Registration></Registration>
+      },
+      
     ]
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <RouterProvider router={router} />
+   <FirebaseProvider>
+   <RouterProvider router={router} />
+   </FirebaseProvider>
   </React.StrictMode>,
 )

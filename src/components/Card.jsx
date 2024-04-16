@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom"
 
 
 
 const Card = ({ cart }) => {
     const { id, estate_title, image, facilities, location } = cart;
     return (
-        <div>
+        <div className="">
             <div data-aos="fade-left" data-aos-duration='2000' className='card bg-base-100 shadow-xl rounded-lg border border-gray-200'>
 
                 <figure className=''>
@@ -29,7 +30,13 @@ ${estate_title}`} />
                     <p className="gap-3">{location}</p>
 
                     <hr className='border-dotted my-2' />
+
                     <div className='flex justify-between mb-3'>
+                        <Link  to ={`/cart/${id}`}
+                        className="btn bg-black text-white">
+                      
+                        View Property</Link>
+
 
                         {/* <p className='ml-2'>{category}</p>
 

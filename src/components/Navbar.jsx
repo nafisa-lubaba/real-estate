@@ -40,8 +40,8 @@ const Navbar = () => {
                 </div>
 
                 <div className="navbar-end hidden sm:block lg:flex lg:gap-2">
-                    <a className="btn bg-green-400 text-white lg:text-xl mr-5">Sign In</a>
-                    <a className="btn lg:text-xl">Sign Up</a>
+                    <NavLink to='/signin' className="btn bg-green-400 text-white lg:text-xl mr-5">Sign In</NavLink>
+                  
                 </div>
 
 

@@ -5,7 +5,7 @@ const Swiper = () => {
     return (
         <div className='mt-10'>
             <Carousel>
-                <div className='h-[10%]'>
+                <div className=''>
                     <img src="https://i.ibb.co/rZ2Cfzg/download-1.jpg" />
                     <p className="legend"></p>
                 </div>
