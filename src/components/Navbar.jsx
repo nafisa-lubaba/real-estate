@@ -1,5 +1,7 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import UseAuth from "../Hook/UseAuth";
 const Navbar = () => {
+    const { logOut, user } = UseAuth()
     return (
         <div>
 
@@ -19,8 +21,7 @@ const Navbar = () => {
                             <NavLink to='/about' className={({ isActive }) => isActive ? 'border border-green-500 text-green-400 px-3' : 'font-extrabold'}>About</NavLink>
                             <NavLink to='/contactus' className={({ isActive }) => isActive ? 'border border-green-500 text-green-400 px-3' : 'font-extrabold'}>Contact Us</NavLink>
                             <div className="navbar-end gap-3 lg:hidden">
-                                <a className="btn bg-green-400 text-white lg:text-xl">Sign In</a>
-                                <a className=" btn lg:text-xl">Sign Up</a>
+                                <NavLink to='/signin' className="btn bg-green-400 text-white lg:text-xl mr-5">Sign In</NavLink>
                             </div>
                         </ul>
                     </div>
@@ -39,16 +40,51 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                <div className="navbar-end hidden sm:block lg:flex lg:gap-2">
+                {/* <div className="navbar-end hidden sm:block lg:flex lg:gap-2">
                     <NavLink to='/signin' className="btn bg-green-400 text-white lg:text-xl mr-5">Sign In</NavLink>
                   
+                </div> */}
+                <div className="navbar-end">
+                    {
+                        user?.email ? <div className="dropdown dropdown-end">
+                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                <div className="w-10 rounded-full">
+                                    <img src={user.photoURL} alt={user.displayName} />
+                                </div>
+                            </label>
+                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                                <li>
+                                    <button className="btn btn-sm  btn-ghost">{user.displayName}</button>
+
+                                </li>
+                                <li>
+                                    <button className="btn btn-sm  btn-ghost"
+                                        onClick={logOut}
+                                    >Logout</button>
+
+                                </li>
+                            </ul>
+                        </div>
+                            :
+                            <Link to='/signin'>
+                                <button className="btn btn-sm  btn-ghost">Login</button>
+                            </Link>
+                    }
                 </div>
+        
 
 
-            </div>
+
+
+
+
+
 
 
         </div>
+
+
+        </div >
 
     );
 };

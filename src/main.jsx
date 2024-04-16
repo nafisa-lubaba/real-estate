@@ -18,6 +18,7 @@ import ErrorPage from './pages/ErrorPage';
 import SignIn from './pages/SignIn';
 import Registration from './pages/Registration';
 import FirebaseProvider from './FirebaseProvider/FirebaseProvider';
+import PrivateRoute from './components/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -31,24 +32,34 @@ const router = createBrowserRouter([
       },
       {
         path:'/cart/:id',
-        element:<CardInfo></CardInfo>,
+        element:<PrivateRoute>
+          <CardInfo></CardInfo>
+        </PrivateRoute>,
         loader: () => fetch('/data.json')
       },
       {
         path:'/updateprofile',
-        element:<UpdateProfile></UpdateProfile>
+        element:<PrivateRoute>
+          <UpdateProfile></UpdateProfile>
+        </PrivateRoute>
       },
       {
         path:'/userprofile',
-        element:<UserProfile></UserProfile>
+        element:<PrivateRoute>
+          <UpdateProfile></UpdateProfile>
+        </PrivateRoute>
       },
       {
         path:'/about',
-        element:<About></About>
+        element:<PrivateRoute>
+          <About></About>
+        </PrivateRoute>
       },
       {
         path:'/contactus',
-        element:<ContactUs></ContactUs>
+        element:<PrivateRoute>
+          <ContactUs></ContactUs>
+        </PrivateRoute>
       },
       {
         path:'/signin',
