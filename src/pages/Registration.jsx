@@ -1,27 +1,57 @@
 import { useContext } from "react";
 import { AuthContext } from "../FirebaseProvider/FirebaseProvider";
+import { useForm } from "react-hook-form"
 
 
 const Registration = () => {
     const {createUser} =useContext(AuthContext)
-    console.log(createUser)
+    // console.log(createUser)
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+      } = useForm()
+      const onSubmit = (data) => {
+        const {email, password}= data
+        createUser(email, password)
+        .then(result =>{
+            console.log(result)
+        })
+      }
     return (
         <div>
           <div className="w-full p-8 space-y-3 rounded-xl bg-emerald-100">
 	<h1 className="text-2xl font-bold text-center">Sign up</h1>
-	<form noValidate="" action="" className="space-y-6">
+	<form onSubmit={handleSubmit(onSubmit)} noValidate="" action="" className="space-y-6">
 		<div className="space-y-1 text-sm">
-			<label htmlFor="username" className="block dark:text-gray-600">Username</label>
-			<input type="text" name="username" id="username" placeholder="Username" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+			<label htmlFor="username" className="block dark:text-gray-600">Fullname</label>
+			<input type="text" name="username" id="username" placeholder="fullname" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+          {...register("fullName", { required: true })}  />
+             {errors.fullName && <span className="text-red-600">This field is required</span>}
+		</div>
+        <div className="space-y-1 text-sm">
+			<label htmlFor="username" className="block dark:text-gray-600">Email</label>
+			<input type="text" name="username" id="username" placeholder="Username" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+             {...register("email", { required: true })} />
+             {errors.email && <span  className="text-red-600">This field is required</span>}
+		</div>
+        <div className="space-y-1 text-sm">
+			<label htmlFor="username" className="block dark:text-gray-600">Image Url</label>
+			<input type="text" name="username" id="username" placeholder="Username" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" 
+             {...register("imageUrl")} />
+             
 		</div>
 		<div className="space-y-1 text-sm">
 			<label htmlFor="password" className="block dark:text-gray-600">Password</label>
-			<input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+			<input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+             {...register("password", { required: true })} />
+             {errors.password && <span className="text-red-600">This field is required</span>}
 			<div className="flex justify-end text-xs dark:text-gray-600">
 				<a rel="noopener noreferrer" href="#">Forgot Password?</a>
 			</div>
 		</div>
-		<button className="block w-full p-3 text-center rounded-sm dark:text-gray-50 dark:bg-violet-600">Sign up</button>
+		<button className="block w-full p-3 text-center rounded-sm dark:text-gray-50 dark:bg-violet-600 bg-black text-white">Sign up</button>
 	</form>
 	<div className="flex items-center pt-4 space-x-1">
 		<div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
