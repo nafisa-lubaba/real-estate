@@ -6,13 +6,13 @@ const Navbar = () => {
     const nav =
         user ? (<>
 
-            <NavLink to='/' className={({ isActive }) => isActive ? 'border border-green-500 text-green-400 px-3 text-xl font-bold' : 'font-bold text-xl'}>Home</NavLink>
+            <NavLink to='/' className={({ isActive }) => isActive ? 'border border-orange-500 text-orange-400 px-3 text-xl font-bold' : 'font-bold text-xl'}>Home</NavLink>
 
-            <NavLink to='/updateprofile' className={({ isActive }) => isActive ? 'border border-green-500 text-green-400 px-3 text-xl font-bold' : 'font-bold text-xl'}>Update profile</NavLink>
-            <NavLink to='/userprofile' className={({ isActive }) => isActive ? 'border border-green-500 text-green-400 px-3 text-xl font-bold' : 'font-bold text-xl'}>User Profile</NavLink>
+            <NavLink to='/updateprofile' className={({ isActive }) => isActive ? 'border border-orange-500 text-orange-400 px-3 text-xl font-bold' : 'font-bold text-xl'}>Update profile</NavLink>
+            <NavLink to='/userprofile' className={({ isActive }) => isActive ? 'border border-orange-500 text-orange-400 px-3 text-xl font-bold' : 'font-bold text-xl'}>User Profile</NavLink>
     
-            <NavLink to='/contactus' className={({ isActive }) => isActive ? 'border border-green-500 text-green-400 px-3 text-xl font-bold' : 'font-bold text-xl'}>Contact Us</NavLink>
-        </>) : (<NavLink to='/' className={({ isActive }) => isActive ? 'border border-green-500 text-green-400 px-3 text-xl font-bold' : 'font-bold text-xl'}>Home</NavLink>)
+            <NavLink to='/contactus' className={({ isActive }) => isActive ? 'border border-orange-500 text-orange-400 px-3 text-xl font-bold' : 'font-bold text-xl'}>Contact Us</NavLink>
+        </>) : (<NavLink to='/' className={({ isActive }) => isActive ? 'border border-orange-500 text-orange-400 px-3 text-xl font-bold' : 'font-bold text-xl'}>Home</NavLink>)
   
     return (
         <div>
@@ -28,7 +28,7 @@ const Navbar = () => {
 
                             {nav}
                             <div className="navbar-end gap-3 lg:hidden">
-                                <NavLink to='/signin' className="btn bg-green-400 text-white lg:text-xl mr-5">Sign In</NavLink>
+                                <NavLink to='/signin' className="btn bg-green-400 text-white lg:text-2xl mr-5">Sign In</NavLink>
                             </div>
                         </ul>
                     </div>
@@ -70,7 +70,7 @@ const Navbar = () => {
                         </div>
                             :
                             <Link to='/signin'>
-                                <button className="btn btn-sm  btn-ghost">Login</button>
+                                <button className="btn bg-orange-400 text-black">Login</button>
                             </Link>
                     }
                 </div>

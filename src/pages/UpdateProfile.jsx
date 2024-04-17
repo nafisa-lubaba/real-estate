@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { useForm } from 'react-hook-form';
 import design from '../assets/imageslogin.png'
 import { useContext } from 'react';
+import 'animate.css';
 import { AuthContext } from '../FirebaseProvider/FirebaseProvider';
 const UpdateProfile = () => {
     const {   updateUser } = useContext(AuthContext)
@@ -20,7 +21,7 @@ const UpdateProfile = () => {
             <Helmet>
                 <title>PropHaven | Update Profile</title>
             </Helmet>
-            <div className='hero min-h-screen' style={{ backgroundImage: `url(${design})` }}>
+            <div className='hero min-h-screen animate__animated animate__zoomInDown' style={{ backgroundImage: `url(${design})` }}>
                 <div className="w-full px-10 max-w-md py-8  rounded-xl
         ">
                     <div className="hero-overlay bg-opacity-60"></div>

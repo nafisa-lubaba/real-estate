@@ -1,7 +1,14 @@
 import { useLoaderData, useParams } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async';
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from 'react';
 
 const CardInfo = () => {
+    useEffect(() =>{
+        Aos.init();
+
+    },[])
     const carts = useLoaderData()
     const { id } = useParams()
     const idInt = parseInt(id)
@@ -15,7 +22,7 @@ const CardInfo = () => {
             </Helmet>
 
             <div className="hero min-h-screen bg-lime-100">
-                <div className="hero-content gap-10  flex flex-col lg:flex-row lg:justify-center">
+                <div data-aos="zoom-in-right" className="hero-content gap-10  flex flex-col lg:flex-row lg:justify-center">
                     <img src={cart.image} className="lg:max-w-sm rounded-lg shadow-2xl" />
                     <div>
                         <h1 className=" text-3xl font-bold lg:text-5xl lg:font-bold">{cart.estate_title}</h1>

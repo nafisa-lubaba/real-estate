@@ -20,7 +20,7 @@ const Card = ({ cart }) => {
                     <img className='rounded-xl px-5 pt-5' src={image} alt={`image for the estate_title
 ${estate_title}`} />
                 </figure>
-                <div className='card-body'>
+                <div className='card-body'data-aos='fade-left'>
                 <h1 className='text-xl font-bold'>{estate_title}</h1>
                     <p className="gap-3">{location}</p>
                     <div className='flex justify-between mb-3'>
@@ -30,7 +30,7 @@ ${estate_title}`} />
 
                                 <div className="flex gap-10">
                                     {facilities.map((facilitie, idx) => (
-                                        <p className="text-green-500" key={idx}>{facilitie}</p>
+                                        <p className="text-orange-500" key={idx}>#{facilitie}</p>
                                     ))}
                                 </div>
                             </>
