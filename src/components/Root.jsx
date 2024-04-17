@@ -1,4 +1,5 @@
 
+import Footer from '../pages/Footer';
 import Navbar from './Navbar';
 import {Outlet} from 'react-router-dom'
 
@@ -10,6 +11,8 @@ const Root = () => {
         
         
            <Outlet></Outlet>
+
+           <Footer></Footer>
         
            
          

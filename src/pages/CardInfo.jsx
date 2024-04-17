@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async';
 
 const CardInfo = () => {
     const carts = useLoaderData()
@@ -7,7 +8,11 @@ const CardInfo = () => {
     const cart = carts.find(cart => cart.id === idInt)
     console.log(cart)
     return (
+
         <div className='mx-auto w-[90%] gap-5'>
+              <Helmet>
+                <title>PropHaven | CardInfo</title>
+            </Helmet>
 
             <div className="hero min-h-screen bg-lime-100">
                 <div className="hero-content gap-10  flex flex-col lg:flex-row lg:justify-center">

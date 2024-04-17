@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 
 
 
+
 const Card = ({ cart }) => {
     const { id, estate_title, image, facilities, location } = cart;
     return (

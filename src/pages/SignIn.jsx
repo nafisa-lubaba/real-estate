@@ -4,10 +4,16 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../FirebaseProvider/FirebaseProvider';
 import { useForm } from "react-hook-form"
 import SocialLogin from './SocialLogin';
+import { useLocation, useNavigate } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
 
 const SignIn = () => {
 
     const {signInUser} = useContext(AuthContext)
+    const Navigate = useNavigate()
+	const location= useLocation()
+	const from = location?.state || '/'
+    
 
     const {
         register,
@@ -17,16 +23,26 @@ const SignIn = () => {
       const onSubmit = data => {
         const {email, password}= data
         signInUser(email, password)
-        .then(result =>{
-            console.log(result.user)
-        })
+        .then(result => {
+			if (result.user){
+				Navigate(from)
+			}
+		
+		})
+        
+    
         .catch(error =>{
             console.log(error)
         })
       }
     return (
+        
         <div className="w-full px-10 py-8  rounded-xl
         bg-emerald-100">
+            <Helmet>
+                <title>PropHaven | LogIn</title>
+            </Helmet>
+
 	<h1 className="text-2xl font-bold text-center">Login</h1>
 	<form onSubmit={handleSubmit(onSubmit)} noValidate="" action="" className="space-y-6">
 		<div className="space-y-1 text-sm">
