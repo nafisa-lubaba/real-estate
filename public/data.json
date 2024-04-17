@@ -77,7 +77,7 @@
       "status": "rent",
       "area": "4500 sq ft",
       "location": "Secluded Coastal Haven",
-      "facilities": ["Private Pool", "Beachfront Access", "Outdoor Lounge", "Chef's Kitchen"],
+      "facilities": ["Private Pool","Outdoor Lounge", "Chef's Kitchen"],
       "other_information": {
         "bedrooms": 8,
         "bathrooms": 6,
@@ -94,7 +94,7 @@
       "status": "rent",
       "area": "2500 sq ft",
       "location": "Snowy Mountain Resort",
-      "facilities": ["Hot Tub", "Fireplace", "Ski Storage", "Game Room"],
+      "facilities": ["Hot Tub", "Fireplace", "Game Room"],
       "other_information": {
         "bedrooms": 4,
         "bathrooms": 3,

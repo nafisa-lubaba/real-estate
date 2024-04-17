@@ -2,6 +2,7 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Card from './Card';
+import Marquee from "react-fast-marquee";
 
 const Cards = () => {
     const [carts, sertCarts] = useState([])
@@ -13,7 +14,9 @@ const Cards = () => {
     return (
         <div>
              <div>
-                <h2 className="font-bold  text-5xl text-center mt-10 mb-5">Books</h2>
+             <Marquee pauseOnHover={true} speed={100}>
+                <h2 className="font-bold  text-3xl text-center mt-10 mb-5">Hospitality of ours and excellent offer for you....</h2>
+                </Marquee>
 
             </div>
             <div className="grid grid-rows-1 lg:grid-cols-3 gap-8 h-full">
