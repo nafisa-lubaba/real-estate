@@ -21,6 +21,7 @@ import FirebaseProvider from './FirebaseProvider/FirebaseProvider';
 import PrivateRoute from './components/PrivateRoute';
 import { HelmetProvider } from 'react-helmet-async';
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -50,12 +51,7 @@ const router = createBrowserRouter([
          <UserProfile></UserProfile>
         </PrivateRoute>
       },
-      {
-        path:'/about',
-        element:<PrivateRoute>
-          <About></About>
-        </PrivateRoute>
-      },
+      
       {
         path:'/contactus',
         element:<PrivateRoute>

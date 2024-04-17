@@ -5,7 +5,7 @@ import {Outlet} from 'react-router-dom'
 
 const Root = () => {
     return (
-        <div className='mx-auto w-[90%]'>
+        <div className='mx-auto'>
            
           <Navbar></Navbar>
         
