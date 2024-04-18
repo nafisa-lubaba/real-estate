@@ -36,7 +36,7 @@ const Slider = () => {
                 <div className="absolute inset-0 flex flex-col justify-center items-center text-center bg-black bg-opacity-20 rounded-lg">
                     <h2 className="text-2xl lg:text-5xl text-white pb-5 font-bold">Welcome to PropHaven </h2>
                     <div className="flex w-[350px] lg:w-[650px] text-center">
-                        <p className="sm:block hidden lg:text-xl text-white">PropHaven: Where your dream home finds its perfect sanctuary amidst a sea of real estate possibilities.</p>
+                        <p className="sm:block hidden lg:text-xl text-white font-bold">Where your dream home finds its perfect sanctuary amidst a sea of real estate possibilities.</p>
                     </div>
                 </div>
             </SwiperSlide>
@@ -47,7 +47,7 @@ const Slider = () => {
                 <div className="absolute inset-0 flex flex-col justify-center items-center text-center bg-black bg-opacity-20 rounded-lg">
                     <h2 className="text-2xl lg:text-5xl text-white pb-5 font-bold">Welcome to PropHaven </h2>
                     <div className="flex w-[350px] lg:w-[650px] text-center">
-                        <p className="sm:block hidden lg:text-xl text-white">PropHaven: Where your dream home finds its perfect sanctuary amidst a sea of real estate possibilities.</p>
+                        <p className="sm:block hidden lg:text-xl text-white font-bold"> Where your dream home finds its perfect sanctuary amidst a sea of real estate possibilities.</p>
                     </div>
                 </div>
             </SwiperSlide>
