@@ -9,7 +9,8 @@
 - **Sign Out**: Safely log out of your account to protect your privacy and ensure security.
 - **I am using the npm package :**
 # React Hook form
-# AOS Package,
-# Animate.css,
+# AOS Package
+# Animate.css
+# Swiper slider
 
 

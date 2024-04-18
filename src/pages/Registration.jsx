@@ -130,7 +130,7 @@ const Registration = () => {
 
 					</div>
 					<p className="text-center sm:px-6 dark:text-gray-600 text-xl">Already have an account?
-						<Link to='/signin' rel="noopener noreferrer" href="#" className="underline text-black font-semibold text-xl">Sign up</Link>
+						<Link to='/signin' rel="noopener noreferrer" href="#" className="underline text-black font-semibold text-xl">Sign in</Link>
 					</p>
 				</div>
 				<ToastContainer />

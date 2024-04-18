@@ -1,5 +1,6 @@
 import Cards from "../components/Cards";
-import Swiper from "../components/Swiper";
+import Slider from "../components/Slider";
+
 import { Helmet } from 'react-helmet-async';
 
 
@@ -11,12 +12,12 @@ const Home = () => {
 
     return (
 
-        <div>
+        <div className="overflow-x-hidden">
             <Helmet>
                 <title>PropHaven | Home</title>
             </Helmet>
          <div className="rounded-2xl ">
-         <Swiper></Swiper>
+         <Slider></Slider>
          <Cards></Cards>
          </div>
 
