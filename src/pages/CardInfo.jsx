@@ -26,8 +26,10 @@ const CardInfo = () => {
                     <img src={cart.image} className="lg:max-w-sm rounded-lg shadow-2xl" />
                     <div>
                         <h1 className=" text-3xl font-bold lg:text-5xl lg:font-bold">{cart.estate_title}</h1>
+                        <p className='font-bold text-2xl px-3 text-orange-400 mt-3'>   {cart.segment_name}</p>
                         {/* <p className="py-6">{cart.estate_title}</p> */}
-                        <p className="py-6"><span className='font-bold'>description:</span>{cart.description}</p>
+                        <p className="py-6"><span className='font-bold'>Description:</span>{cart.description}</p>
+                       
                         {/* <div className='flex justify-between mb-3'>
                             {Array.isArray(book.tags) && (
                                 <>
@@ -46,11 +48,20 @@ const CardInfo = () => {
 
                         <hr className='border-dotted my-2' />
                         <div className='mb-3'>
-                            <p className=''>price:  <span className='font-semibold ml-3'>  {cart.price}</span></p>
-                            <p className=''>status:  <span className='font-semibold ml-3'> {cart.status}</span></p>
-                            <p className=''>area:   <span className='font-semibold ml-3'>{cart.area}</span></p>
-                            <p className=''>location:  <span className='font-semibold ml-3'> {cart.location}</span></p>
+                            <p className='font-bold'>Price:  <span className='font-semibold ml-3'>  {cart.price}</span></p>
+                           
+                            <p className='font-bold'>Area:   <span className='font-semibold ml-3'>{cart.area}</span></p>
+                            <p className='font-bold'>Location:  <span className='font-semibold ml-3'> {cart.location}</span></p>
                         </div>
+                        <p className='font-bold text-xl'>Facilities:</p>
+
+                    
+                        { 
+                    
+                    cart.facilities.map((facilities, idx) => (
+                        <li className='ml-5 text-black' key={idx}>{facilities}</li>
+                    ))}
+                     <p className='font-bold'>Status:  <span className='font-semibold ml-3 text-orange-500'> {cart.status}</span></p>
 
                        
                     </div>

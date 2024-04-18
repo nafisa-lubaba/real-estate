@@ -1,5 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import UseAuth from "../Hook/UseAuth";
+import Swal from 'sweetalert2'
 
 
 const SocialLogin = () => {
@@ -14,12 +15,28 @@ const SocialLogin = () => {
 	const handleSocialLogin = socialProvider =>{
 		socialProvider()
 		.then(result => {
-			if (result.user){
+			Swal.fire({
+				icon: 'success',
+				title: 'Login successful',
+				showConfirmButton: false,
+				timer: 1500,
+			});
+			if (result.user) {
 				Navigate(from)
 			}
-		
+		})
+		.catch(error => {
+			Swal.fire({
+				icon: "error",
+				title: "Oops... Login Failed",
+				text: "Something went wrong!",
+				footer: '<a href="#">Why do I have this issue?</a>'
+			});
+
+
 		})
 	}
+	
     return (
         <div className="flex justify-center space-x-4">
 		<button

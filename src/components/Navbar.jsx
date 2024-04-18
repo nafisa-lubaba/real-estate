@@ -27,9 +27,9 @@ const Navbar = () => {
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
 
                             {nav}
-                            <div className="navbar-end gap-3 lg:hidden">
+                            {/* <div className="navbar-end gap-3 lg:hidden">
                                 <NavLink to='/signin' className="btn bg-green-400 text-white lg:text-2xl mr-5">Sign In</NavLink>
-                            </div>
+                            </div> */}
                         </ul>
                     </div>
 

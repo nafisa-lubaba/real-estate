@@ -44,7 +44,7 @@ const SignIn = () => {
             .then(result => {
                 Swal.fire({
                     icon: 'success',
-                    title: 'Registration successful',
+                    title: 'Login successful',
                     showConfirmButton: false,
                     timer: 1500,
                 });
@@ -55,7 +55,7 @@ const SignIn = () => {
             .catch(error => {
                 Swal.fire({
                     icon: "error",
-                    title: "Oops... Registration Failed",
+                    title: "Oops... Login Failed",
                     text: "Something went wrong!",
                     footer: '<a href="#">Why do I have this issue?</a>'
                 });
