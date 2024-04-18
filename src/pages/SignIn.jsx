@@ -88,7 +88,7 @@ const SignIn = () => {
                         <form onSubmit={handleSubmit(onSubmit)} noValidate="" action="" className="space-y-6">
                             <div className="space-y-1 text-sm">
                                 <label htmlFor="username" className="block dark:text-gray-600">Email</label>
-                                <input type="text" name="username" id="username" placeholder="email" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                                <input type="text" name="username" id="username" placeholder="Email" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
                                     {...register("email", { required: true })} />
                                 {errors.email && <span className="text-red-600">This field is required</span>}
 
