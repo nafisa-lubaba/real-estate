@@ -2,6 +2,8 @@ import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.config";
 import  {createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile} from "firebase/auth";
 import { onAuthStateChanged } from "firebase/auth";
+import { toast } from 'react-toastify';
+import Swal from 'sweetalert2'
 import { GoogleAuthProvider, signInWithPopup, GithubAuthProvider,signOut } from "firebase/auth";
 export const AuthContext =createContext(null)
 
@@ -26,7 +28,23 @@ const FirebaseProvider = ({children}) => {
             displayName: name , 
             photoURL: photourl
           }).then(() => {
+            Swal.fire({
+              icon: 'success',
+              title: 'Update Profile successful',
+              showConfirmButton: false,
+              timer: 1500,
+            });
             setUser({...user, displayName: name, photoURL: photourl})
+          })
+          .catch(error => {
+            Swal.fire({
+              icon: "error",
+              title: "Oops... Update profile Failed",
+              text: "Something went wrong!",
+              footer: '<a href="#">Why do I have this issue?</a>'
+            });
+
+          
 
           })
         
@@ -49,8 +67,11 @@ const FirebaseProvider = ({children}) => {
 
     const logOut =()=>{
         setUser (null)
+        
         setLoading(false)
         signOut(auth)
+        toast.success("Logout successful!");
+        
     }
 
     useEffect(()=>{

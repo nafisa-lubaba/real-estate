@@ -1,5 +1,6 @@
 import Cards from "../components/Cards";
 import Slider from "../components/Slider";
+import { ToastContainer } from 'react-toastify';
 
 import { Helmet } from 'react-helmet-async';
 
@@ -20,6 +21,8 @@ const Home = () => {
          <Slider></Slider>
          <Cards></Cards>
          </div>
+
+         <ToastContainer/>
 
 
 

@@ -3,6 +3,8 @@ import { useForm } from 'react-hook-form';
 import design from '../assets/imageslogin.png'
 import { useContext } from 'react';
 import 'animate.css';
+
+
 import { AuthContext } from '../FirebaseProvider/FirebaseProvider';
 const UpdateProfile = () => {
     const {   updateUser } = useContext(AuthContext)

@@ -1,5 +1,5 @@
 # Website Name: PropHaven
-# Website Link: https://66210ec5178b6507bd5e3c2d--nafisa-assignment-09.netlify.app/
+# Website Link: https://6621189ca966b30fdf957bf7--nafisa-assignment-09.netlify.app/
 **Home**: Discover featured prophecies, community discussions, and updates on our homepage.
 - **Update Profile**: Customize your user profile, update personal information, and manage preferences.
 - **User Profile**: Explore user profiles, view activity history, and connect with other members of the Propheven community.
